@@ -1,5 +1,8 @@
 FireTrack: Firefox extension to track time spent on websites
 
+Madhuri, I AM DISAPPOINT. 
+Please stop snooping around and get back to your work.
+
 FireTrack is an extension which tracks time spent on different
 websites. 
 
@@ -55,5 +58,7 @@ IMPLEMENTATION DETAILS
 
 - Custom queries. Expose the table/data to the user and let her
   specify the query.
+
+- The Addon will not record statistics when in private-browsing mode.
 
 - Addon should be thread safe.
