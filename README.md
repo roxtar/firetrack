@@ -60,3 +60,7 @@ Please stop snooping around and get back to your work._
 * The Addon will not record statistics when in private*browsing mode.
 
 * Addon should be thread safe.
+
+#LICENSE
+See file LICENSE or
+http://www.opensource.org/licenses/mit-license.php
