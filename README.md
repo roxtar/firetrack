@@ -1,8 +1,27 @@
 FireTrack: FireTrack is an extension which tracks time spent on
 different websites.
 
-_Madhuri, I AM DISAPPOINT. 
-Please stop snooping around and get back to your work._
+# INSTALLATION
+
+1. Download the firetrack.xpi file.
+2. Open Firefox
+3. Click on "Firefox->New Tab->Open File" and open the xpi file.
+4. Click on the "Install Now" button
+
+# USAGE
+
+While on any page, right click and select the "Firetrack" menu option
+to open the dashboard.
+
+Alternatively, press "Ctrl + Alt + i" on Windows and Linux to open the
+Firetrack dashboard. Pressing the hotkey combination again will hide
+the dashboard.
+
+# LICENSE
+
+See file LICENSE or
+http://www.opensource.org/licenses/mit-license.php
+
 
 # DESIGN GOALS
 
@@ -57,10 +76,7 @@ Please stop snooping around and get back to your work._
 * Custom queries. Expose the table/data to the user and let her
   specify the query.
 
-* The Addon will not record statistics when in private*browsing mode.
+* The Addon will not record statistics when in private-browsing mode.
 
-* Addon should be thread safe.
 
-#LICENSE
-See file LICENSE or
-http://www.opensource.org/licenses/mit-license.php
+
