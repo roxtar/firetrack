@@ -18,5 +18,5 @@ self.port.on('render', function(store) {
 		     bars:{show:true}}
 	};
 
-	$.plot($("#placeholder"), data, options);	
+	    $.plot($("#placeholder"), data, options);	
     });
