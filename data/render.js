@@ -22,7 +22,7 @@ self.port.on('render', function(store) {
 		     lines: {show:false, steps:false},
 		     bars:{show:true}},
 	    legend : {
-		show: false
+		show: true 
 	    },
 	    grid: {hoverable: true},
 	};
@@ -32,7 +32,7 @@ self.port.on('render', function(store) {
 	    $('<div id="tooltip">' + contents + '</div>').css( {
 		    position: 'absolute',
 			display: 'none',
-			top: y + 5,
+			top: y - 30,
 			left: x + 5,
 			border: '1px solid #fdd',
 			padding: '2px',
@@ -41,11 +41,11 @@ self.port.on('render', function(store) {
 			}).appendTo("body").fadeIn(200);
 	}
 
-	var previousPoint = null;
+	var previousLabel = null;
 	$("#placeholder").bind("plothover", function (event, pos, item) {
 		    if (item) {
-			if (previousPoint != item.dataIndex) {
-			    previousPoint = item.dataIndex;
+			if (previousLabel != item.series.label) {
+			    previousLabel = item.series.label;
 			    $("#tooltip").remove();
 			    var x = item.datapoint[0].toFixed(2),
 				y = item.datapoint[1].toFixed(2);
@@ -56,7 +56,7 @@ self.port.on('render', function(store) {
 		    }
 		    else {
 			$("#tooltip").remove();
-			previousPoint = null;
+			previousLabel = null;
 		    }
 	    });
     });
