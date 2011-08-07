@@ -1,5 +1,5 @@
+TODO
 - Make store persisitent
-- Don't track while in private browsing.
 - Display in panel
   -- Sorted by time
   -- Charts
@@ -8,3 +8,7 @@
 - Logo
 - Firetrack settings
 - Bar graph display should only display top 6 sites
+
+DONE
+
+- Don't track while in private browsing.
