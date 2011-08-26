@@ -1,3 +1,31 @@
+$(document).ready(function() { 
+		$("#ft_settings_form").hide();
+
+		$("#ft_settings").click(function(event) { 
+				// ask the add on to send the settings to us
+			    self.port.emit('send_settings');	
+				event.preventDefault(); 
+				event.stopPropagation();
+				});
+
+		$("#ft_settings_form").submit(function(event) {
+				settings = {};
+				settings.hotkey = $("#hotkey").val();
+				console.log(settings.hotkey);
+				self.port.emit("settings_changed", settings);
+				$("#ft_settings_form").hide();
+				$("#ft_panel").show();
+				event.preventDefault();
+				event.stopPropagation();
+		}); 
+});
+
+self.port.on('show_settings', function(settings) {
+				$("#ft_panel").hide();
+				$("#ft_settings_form").show();
+				$("#hotkey").val(settings.hotkey);
+});
+
 self.port.on('render', function (store) {	
 	"use strict";
 	// reads the time data present in "store"
